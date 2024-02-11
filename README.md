@@ -1,20 +1,21 @@
 # Pre-requisites
-- Node.js.
+- Node.js runtime
 - Postman or any other client to make calls to the API endpoints. (curl commands if you are familar).
 
 # Set-up
 - Clone this reository to your local machine.
-- Run the following command in the terminal/command propmpt where the repository is cloned, to install all the dependencies.
+- Run the following command in the terminal/command propmpt where the repository is cloned, to install all the dependencies.<br/>
 ``` npm install```
-- Have 2 terminals/command lines open to run on 2 different ports. And enter the following command and hit enter ```npm run devstart``` & ```npm start```.
-
+- Have 2 terminals/command lines open to run on 2 different ports. And enter the following command and hit enter<br/>
+```npm start```<br/>
+```npm run devstart```
 
 # cURLs to call the API endpoints
 
 *Copy the curl requests and paste it in the postman URL bar, the whole request should be set for you to make calls.*
 
 1. To generate a JWT access_token. (It also returns a refresh_token, which can be used in the step 3).<br/>
-```curl --location 'http://localhost:4000/login' \ --header 'Content-Type: application/json' \ --data '{ "username": "Jane"}' ```
+```curl --location 'http://localhost:4000/login' \ --header 'Content-Type: application/json' \ --data '{ "username": "John"}' ```
 2. To retrieve the value associated with the JWT token. (Use the access_token generated from above curl).<br/>
 ```curl --location 'http://localhost:3000/posts' \ --header 'Authorization: Bearer access_token'```
 3. To refresh the access_token, if expired. (Use the refresh_token generated in step 1).<br/>
