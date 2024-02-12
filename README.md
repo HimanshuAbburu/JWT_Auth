@@ -9,6 +9,9 @@
 - Have 2 terminals/command lines open to run on 2 different ports. And enter the following command and hit enter<br/>
 ```npm start```<br/>
 ```npm run devstart```
+- Add a .env file in the same directory level as index.js. Add the below two variables and assign secret keys<br/>
+```ACCESS_TOKEN=ade478iuhjk...```<br/>
+```REFRESH_TOKEN=mnbhjki8767i...```
 
 # cURLs to call the API endpoints
 
